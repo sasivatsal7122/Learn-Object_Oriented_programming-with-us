@@ -56,3 +56,19 @@ The four pillars of object oriented programming are:
 - **Polymorphism:** many methods can do the same task
 
 
+
+### This is brief introduction to OOP's concepts, we'll extend our knowledge on oop's in next sections of this tutorial
+
+
+
+# Thank you. Peace ✌️.
+
+---
+
+<div>
+<h4 align='center'>Made with ❤️ by <a href='https://github.com/sasivatsal7122https://github.com/sasivatsal7122'>SasiVatsal</a> and <a href='https://github.com/SaiMowli'>Mowli</a>
+</div>
+
+---
+
+
