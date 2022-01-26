@@ -1,0 +1,24 @@
+
+html { 
+  background:no-repeat center center fixed; 
+background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(bg/s3.jpg);
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1,h2{color:#FFC600;}
+h3,h4,p,ol,ul{color:white;}
+
+
+.links a{color:#F90716;}
+
+<link rel="icon" href="py.png">
+
+
+style="color:#79D70F;"	
+
+<span class="links">
+
+style="color:#00BCD4;"
