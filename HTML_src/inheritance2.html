@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inheritance-2</title>
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
+</head>
+<body>
+  <article class="markdown-body"><h1 align="center"><a href='indexc.html'>Learn-Object_Oriented_programming-with-us</a></h1>
+
+<h3> Learn By Topic: </h3>
+
+<h1></h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<h3 style="display:inline;"><a href="class_objects.html" target="_blank" >Class-objects</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="inheritance.html" target="_blank">Inheritance</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="polymorphism.html" target="_blank">Polymorphism</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="encapsulation.html" target="_blank">Encapsulation</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="abstraction.html" target="_blank">Abstraction</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href=""></a></h3>
+
+<h1 class="atx" id=""></h1>
+<h1 class="atx" id="welcome-to-part-2-of-inheritance">Welcome to Part-2 of Inheritance</h1>
+<p>Imagine youself working in a Car company, you're manager gave you a list of items for data entry . But you're too lazy to ente to define and type everything, to solve this isses We will be using Concept of inheritance to reduce the complexity and work.</p>
+<p>Intially while looking at the all parts and data you noticed few inputs are for common for other items,you observed brand,model,price are common for cars, infotainment system and other components, so you sorted them in a category and made a super class with a name Basic_info and instock</p>
+<pre><code class="fenced-code-block language-python"><span class="token keyword">class</span> <span class="token class-name">Basic_info</span><span class="token punctuation">:</span> <span class="token comment">#Parent class 1</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>brand<span class="token operator">=</span>brand
+        self<span class="token punctuation">.</span>model<span class="token operator">=</span>model
+        self<span class="token punctuation">.</span>price<span class="token operator">=</span>price
+
+<span class="token keyword">class</span> <span class="token class-name">instock</span><span class="token punctuation">:</span> <span class="token comment">#Parent class 2</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>avail<span class="token operator">=</span>avail
+        self<span class="token punctuation">.</span>shipment<span class="token operator">=</span>shipment  </code></pre>
+<p>Then you started working on data entry for car which has the following inputs: brand,model,price,avail,shipment. So instead of creating another class you'll inherit parent class-1 and parent class-2. This is an example of multiple inheritance</p>
+<pre><code class="fenced-code-block language-python"><span class="token comment"># example for multiple inheritance --&gt; inheriting more than one parent classes          </span>
+<span class="token keyword">class</span> <span class="token class-name">Cars</span><span class="token punctuation">(</span>Basic_info<span class="token punctuation">,</span>instock<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#inheriting Basic_info class,instock class</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#declaring child class its own init</span>
+        Basic_info<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span>  <span class="token comment">#inheriting Basic_info attributes</span>
+        instock<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span>  <span class="token comment">#inheriting instock attributes</span></code></pre>
+<p>After cars list then you came across next list to enter that is the the list of different infotainment systems used in the cars. Here you observed inputs of infotainment system takes the following inputs: </p>
+<p>brand,model,price,spclfeatures,warranty,rating,avail,shipment</p>
+<p>Here you can observe majority attributes i.e is inputs are similar to the Cars class we created before. Here we can inherit Cars class to make use of those attributes.This is an example of multilevel inheritance</p>
+<pre><code class="fenced-code-block language-python"><span class="token comment">#example for multilevel inheritance --&gt; inheriting child class as parent     </span>
+<span class="token keyword">class</span> <span class="token class-name">infotainment</span><span class="token punctuation">(</span>Cars<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">,</span>spclfeatures<span class="token punctuation">,</span>warranty<span class="token punctuation">,</span>rating<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        Basic_info<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span>
+        instock<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>spclfea<span class="token operator">=</span>spclfeatures <span class="token comment">#intializing additional required attributes</span>
+        self<span class="token punctuation">.</span>warrn<span class="token operator">=</span>warranty
+        self<span class="token punctuation">.</span>rating<span class="token operator">=</span>rating</code></pre>
+<p>In addition to attributes in cars class, we additionaly require special features, warranty and rating so we simply intialize them in this class.</p>
+<p>Now you came to final list to enter , that is a list of paints used for cars. Here paints take the following inputs: brand,model,price,composition,nature.</p>
+<p>excluding composition and nature,  brand,model,price are common in basic_info class, so we can inherit basic_info class to accquire those properties, we can intialize composition,nature in the paints class itself. This is an example for heirarchical inheritance as well as single inheritance</p>
+<pre><code class="fenced-code-block language-python"><span class="token comment"># example for single inheritance --&gt; inheriting a single parent class       </span>
+<span class="token comment"># example for heirarchical inheritance --&gt; inheriting same parent class more than once        </span>
+<span class="token keyword">class</span> <span class="token class-name">paints</span><span class="token punctuation">(</span>Basic_info<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">,</span>composition<span class="token punctuation">,</span>nature<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        Basic_info<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>compo<span class="token operator">=</span>composition <span class="token comment">#intializing additional required attributes</span>
+        self<span class="token punctuation">.</span>nature<span class="token operator">=</span>nature</code></pre>
+<p>I hope you are through with the concepts of Class and objects we discussed earlier, Now lets create objects of our classes.</p>
+<h4 class="atx" id="car-objects">Car objects</h4>
+<pre><code class="fenced-code-block language-python">car1<span class="token operator">=</span>Cars<span class="token punctuation">(</span><span class="token string">"Ford"</span><span class="token punctuation">,</span><span class="token string">"GT-06"</span><span class="token punctuation">,</span><span class="token string">"$45,0000"</span><span class="token punctuation">,</span><span class="token string">"not available"</span><span class="token punctuation">,</span><span class="token string">"expected to arrive soon"</span><span class="token punctuation">)</span> <span class="token comment">#obj-1</span>
+car2<span class="token operator">=</span>Cars<span class="token punctuation">(</span><span class="token string">"Ferrari"</span><span class="token punctuation">,</span><span class="token string">"MX-330"</span><span class="token punctuation">,</span><span class="token string">"$67,000"</span><span class="token punctuation">,</span><span class="token string">"Available"</span><span class="token punctuation">,</span><span class="token string">"Ready to ship in 3 days"</span><span class="token punctuation">)</span> <span class="token comment">#obj-2</span></code></pre>
+<h4 class="atx" id="infotainments-objects">Infotainments objects</h4>
+<pre><code class="fenced-code-block language-python">Zebronics<span class="token operator">=</span>infotainment<span class="token punctuation">(</span><span class="token string">"Zebronics"</span><span class="token punctuation">,</span><span class="token string">"Zeb-Thunder"</span><span class="token punctuation">,</span><span class="token string">"$25"</span><span class="token punctuation">,</span><span class="token string">"50W output with dual stereo speaker"</span><span class="token punctuation">,</span><span class="token string">"5 years"</span><span class="token punctuation">,</span><span class="token string">"5 star"</span><span class="token punctuation">,</span><span class="token string">"available"</span><span class="token punctuation">,</span><span class="token string">"ships in 3 days"</span><span class="token punctuation">)</span> <span class="token comment">#obj-3</span>
+Bose<span class="token operator">=</span>infotainment<span class="token punctuation">(</span><span class="token string">"Bose"</span><span class="token punctuation">,</span><span class="token string">"BV-420"</span><span class="token punctuation">,</span><span class="token string">"$50"</span><span class="token punctuation">,</span><span class="token string">"80W bt portable speaker"</span><span class="token punctuation">,</span><span class="token string">"10 years"</span><span class="token punctuation">,</span><span class="token string">"4.7 star"</span><span class="token punctuation">,</span><span class="token string">"out of stock"</span><span class="token punctuation">,</span><span class="token string">"no units available for shipment"</span><span class="token punctuation">)</span> <span class="token comment">#obj-4</span></code></pre>
+<h4 class="atx" id="paint-objects">Paint objects</h4>
+<pre><code class="fenced-code-block language-python">paintbrand1<span class="token operator">=</span>paints<span class="token punctuation">(</span><span class="token string">"SherinWilliams"</span><span class="token punctuation">,</span><span class="token string">"Red_BX-550"</span><span class="token punctuation">,</span><span class="token string">"$600/litre"</span><span class="token punctuation">,</span><span class="token string">"Al2O3-2H2O+Na2B4O7-10H2O"</span><span class="token punctuation">,</span><span class="token string">"medium"</span><span class="token punctuation">)</span> <span class="token comment">#obj-5</span>
+paintbrand2<span class="token operator">=</span>paints<span class="token punctuation">(</span><span class="token string">"PPG_INDUSTRIES"</span><span class="token punctuation">,</span><span class="token string">"BlueWhite_GTX1650"</span><span class="token punctuation">,</span><span class="token string">"$400/litre"</span><span class="token punctuation">,</span><span class="token string">"FeSO4-7H2O+2PbO-PbO2"</span><span class="token punctuation">,</span><span class="token string">"low"</span><span class="token punctuation">)</span> <span class="token comment">#obj-6</span></code></pre>
+<p>U can create 'x' no.of objects for a class, try with you're own objects for better understanding. Similarly we can create methods inside our class for printing the information. </p>
+<h4 class="atx" id="the-entire-code-tailored-together-looks-like-this">The entire code tailored together looks like this:</h4>
+<p>I've added print methods for each class</p>
+<pre><code class="fenced-code-block language-python"><span class="token triple-quoted-string string">''' Authored By B.SasiVatsal on Dec-7,2021'''</span>
+
+<span class="token comment">#example for all types of inheritance(self,multiple,multilevel,heirarchical)</span>
+<span class="token keyword">class</span> <span class="token class-name">Basic_info</span><span class="token punctuation">:</span> <span class="token comment">#Parent class 1</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>brand<span class="token operator">=</span>brand
+        self<span class="token punctuation">.</span>model<span class="token operator">=</span>model
+        self<span class="token punctuation">.</span>price<span class="token operator">=</span>price
+    <span class="token keyword">def</span> <span class="token function">printinfo</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Car brand and model is"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>brand<span class="token punctuation">,</span>self<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"price is"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>price<span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">instock</span><span class="token punctuation">:</span> <span class="token comment">#Parent class 2</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>avail<span class="token operator">=</span>avail
+        self<span class="token punctuation">.</span>shipment<span class="token operator">=</span>shipment        
+<span class="token comment"># example for multiple inheritance --&gt; inheriting more than one parent classes          </span>
+<span class="token keyword">class</span> <span class="token class-name">Cars</span><span class="token punctuation">(</span>Basic_info<span class="token punctuation">,</span>instock<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#inheriting Basic_info class,instock class</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#declaring child class its own init</span>
+        Basic_info<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span>  <span class="token comment">#inheriting Basic_info attributes</span>
+        instock<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span>  <span class="token comment">#inheriting instock attributes</span>
+    <span class="token keyword">def</span> <span class="token function">printCinfo</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Car brand and model is"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>brand<span class="token punctuation">,</span>self<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"price is"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>price<span class="token punctuation">)</span>    
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>avail<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>shipment<span class="token punctuation">)</span>
+<span class="token comment">#example for multilevel inheritance --&gt; inheriting child class as parent     </span>
+<span class="token keyword">class</span> <span class="token class-name">infotainment</span><span class="token punctuation">(</span>Cars<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">,</span>spclfeatures<span class="token punctuation">,</span>warranty<span class="token punctuation">,</span>rating<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        Basic_info<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span>
+        instock<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>avail<span class="token punctuation">,</span>shipment<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>spclfea<span class="token operator">=</span>spclfeatures <span class="token comment">#intializing additional required attributes</span>
+        self<span class="token punctuation">.</span>warrn<span class="token operator">=</span>warranty
+        self<span class="token punctuation">.</span>rating<span class="token operator">=</span>rating
+    <span class="token keyword">def</span> <span class="token function">printinfo_of_inoftainment</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Accessory brand and model is:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>brand<span class="token punctuation">,</span>self<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Price:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>price<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"warranty period:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>warrn<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Rating:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>rating<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>brand<span class="token punctuation">,</span>self<span class="token punctuation">.</span>model<span class="token punctuation">,</span><span class="token string">"is special for"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>spclfea<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>avail<span class="token punctuation">,</span><span class="token string">"-"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>shipment<span class="token punctuation">)</span>
+
+<span class="token comment"># example for single inheritance --&gt; inheriting a single parent class       </span>
+<span class="token comment"># example for heirarchical inheritance --&gt; inheriting same parent class more than once        </span>
+<span class="token keyword">class</span> <span class="token class-name">paints</span><span class="token punctuation">(</span>Basic_info<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">,</span>composition<span class="token punctuation">,</span>nature<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        Basic_info<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span>brand<span class="token punctuation">,</span>model<span class="token punctuation">,</span>price<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>compo<span class="token operator">=</span>composition <span class="token comment">#intializing additional required attributes</span>
+        self<span class="token punctuation">.</span>nature<span class="token operator">=</span>nature
+    <span class="token keyword">def</span> <span class="token function">printpaint</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Paint manufacturer and model is:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>brand<span class="token punctuation">,</span>self<span class="token punctuation">.</span>model<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Price:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>price<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Chemical Composition:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>compo<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Evnironmental harmfulness lvl:"</span><span class="token punctuation">,</span>self<span class="token punctuation">.</span>nature<span class="token punctuation">)</span>
+
+car1<span class="token operator">=</span>Cars<span class="token punctuation">(</span><span class="token string">"Ford"</span><span class="token punctuation">,</span><span class="token string">"GT-06"</span><span class="token punctuation">,</span><span class="token string">"$45,0000"</span><span class="token punctuation">,</span><span class="token string">"not available"</span><span class="token punctuation">,</span><span class="token string">"expected to arrive soon"</span><span class="token punctuation">)</span> <span class="token comment">#obj-1</span>
+car2<span class="token operator">=</span>Cars<span class="token punctuation">(</span><span class="token string">"Ferrari"</span><span class="token punctuation">,</span><span class="token string">"MX-330"</span><span class="token punctuation">,</span><span class="token string">"$67,000"</span><span class="token punctuation">,</span><span class="token string">"Available"</span><span class="token punctuation">,</span><span class="token string">"Ready to ship in 3 days"</span><span class="token punctuation">)</span> <span class="token comment">#obj-2</span>
+car1<span class="token punctuation">.</span>printCinfo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+car2<span class="token punctuation">.</span>printCinfo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Zebronics<span class="token operator">=</span>infotainment<span class="token punctuation">(</span><span class="token string">"Zebronics"</span><span class="token punctuation">,</span><span class="token string">"Zeb-Thunder"</span><span class="token punctuation">,</span><span class="token string">"$25"</span><span class="token punctuation">,</span><span class="token string">"50W output with dual stereo speaker"</span><span class="token punctuation">,</span><span class="token string">"5 years"</span><span class="token punctuation">,</span><span class="token string">"5 star"</span><span class="token punctuation">,</span><span class="token string">"available"</span><span class="token punctuation">,</span><span class="token string">"ships in 3 days"</span><span class="token punctuation">)</span> <span class="token comment">#obj-3</span>
+Bose<span class="token operator">=</span>infotainment<span class="token punctuation">(</span><span class="token string">"Bose"</span><span class="token punctuation">,</span><span class="token string">"BV-420"</span><span class="token punctuation">,</span><span class="token string">"$50"</span><span class="token punctuation">,</span><span class="token string">"80W bt portable speaker"</span><span class="token punctuation">,</span><span class="token string">"10 years"</span><span class="token punctuation">,</span><span class="token string">"4.7 star"</span><span class="token punctuation">,</span><span class="token string">"out of stock"</span><span class="token punctuation">,</span><span class="token string">"no units available for shipment"</span><span class="token punctuation">)</span> <span class="token comment">#obj-4</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+Zebronics<span class="token punctuation">.</span>printinfo_of_inoftainment<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+Bose<span class="token punctuation">.</span>printinfo_of_inoftainment<span class="token punctuation">(</span><span class="token punctuation">)</span>
+paintbrand1<span class="token operator">=</span>paints<span class="token punctuation">(</span><span class="token string">"SherinWilliams"</span><span class="token punctuation">,</span><span class="token string">"Red_BX-550"</span><span class="token punctuation">,</span><span class="token string">"$600/litre"</span><span class="token punctuation">,</span><span class="token string">"Al2O3-2H2O+Na2B4O7-10H2O"</span><span class="token punctuation">,</span><span class="token string">"medium"</span><span class="token punctuation">)</span> <span class="token comment">#obj-5</span>
+paintbrand2<span class="token operator">=</span>paints<span class="token punctuation">(</span><span class="token string">"PPG_INDUSTRIES"</span><span class="token punctuation">,</span><span class="token string">"BlueWhite_GTX1650"</span><span class="token punctuation">,</span><span class="token string">"$400/litre"</span><span class="token punctuation">,</span><span class="token string">"FeSO4-7H2O+2PbO-PbO2"</span><span class="token punctuation">,</span><span class="token string">"low"</span><span class="token punctuation">)</span> <span class="token comment">#obj-6</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+paintbrand1<span class="token punctuation">.</span>printpaint<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
+paintbrand2<span class="token punctuation">.</span>printpaint<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h3 class="atx" id="output">Output:</h3>
+<pre><code class="fenced-code-block language-python">Car brand <span class="token keyword">and</span> model <span class="token keyword">is</span> Ford GT<span class="token operator">-</span><span class="token number">06</span>
+price <span class="token keyword">is</span> $<span class="token number">45</span><span class="token punctuation">,</span><span class="token number">0000</span>
+<span class="token keyword">not</span> available
+expected to arrive soon
+
+
+Car brand <span class="token keyword">and</span> model <span class="token keyword">is</span> Ferrari MX<span class="token operator">-</span><span class="token number">330</span>
+price <span class="token keyword">is</span> $<span class="token number">67</span><span class="token punctuation">,</span><span class="token number">000</span>
+Available
+Ready to ship <span class="token keyword">in</span> <span class="token number">3</span> days
+
+
+Accessory brand <span class="token keyword">and</span> model <span class="token keyword">is</span><span class="token punctuation">:</span> Zebronics Zeb<span class="token operator">-</span>Thunder
+Price<span class="token punctuation">:</span> $<span class="token number">25</span>
+warranty period<span class="token punctuation">:</span> <span class="token number">5</span> years
+Rating<span class="token punctuation">:</span> <span class="token number">5</span> star
+Zebronics Zeb<span class="token operator">-</span>Thunder <span class="token keyword">is</span> special <span class="token keyword">for</span> 50W output <span class="token keyword">with</span> dual stereo speaker
+available <span class="token operator">-</span> ships <span class="token keyword">in</span> <span class="token number">3</span> days
+
+
+Accessory brand <span class="token keyword">and</span> model <span class="token keyword">is</span><span class="token punctuation">:</span> Bose BV<span class="token operator">-</span><span class="token number">420</span>
+Price<span class="token punctuation">:</span> $<span class="token number">50</span>
+warranty period<span class="token punctuation">:</span> <span class="token number">10</span> years
+Rating<span class="token punctuation">:</span> <span class="token number">4.7</span> star
+Bose BV<span class="token operator">-</span><span class="token number">420</span> <span class="token keyword">is</span> special <span class="token keyword">for</span> 80W bt portable speaker
+out of stock <span class="token operator">-</span> no units available <span class="token keyword">for</span> shipment
+
+
+Paint manufacturer <span class="token keyword">and</span> model <span class="token keyword">is</span><span class="token punctuation">:</span> SherinWilliams Red_BX<span class="token operator">-</span><span class="token number">550</span>
+Price<span class="token punctuation">:</span> $<span class="token number">600</span><span class="token operator">/</span>litre
+Chemical Composition<span class="token punctuation">:</span> Al2O3<span class="token operator">-</span>2H2O<span class="token operator">+</span>Na2B4O7<span class="token operator">-</span>10H2O
+Evnironmental harmfulness lvl<span class="token punctuation">:</span> medium
+
+
+Paint manufacturer <span class="token keyword">and</span> model <span class="token keyword">is</span><span class="token punctuation">:</span> PPG_INDUSTRIES BlueWhite_GTX1650
+Price<span class="token punctuation">:</span> $<span class="token number">400</span><span class="token operator">/</span>litre
+Chemical Composition<span class="token punctuation">:</span> FeSO4<span class="token operator">-</span>7H2O<span class="token operator">+</span>2PbO<span class="token operator">-</span>PbO2
+Evnironmental harmfulness lvl<span class="token punctuation">:</span> low
+
+
+<span class="token operator">**</span> Process exited <span class="token operator">-</span> Return Code<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token operator">**</span>
+Press Enter to exit terminal</code></pre>
+<h2 class="atx" id="i-hope-u-clearly-understood-inheritance-types-of-inheritance-now-try-writing-on-youand39re-own-with-a-problem-statement-donand39t-forget-to-use-all-5-types-of-inheritance-in-youand39re-code-like-i-did-best-of-luck">I hope u clearly understood inheritance, types of inheritance, now try writing on you're own with a problem statement, don't forget to use all 5 types of inheritance in you're code like i did. BEST OF LUCK.</h2>
+<h5 class="atx" id="note-u-can-also-find-source-code-in-and39codes_srcand39-directory-in-repo">note: u can also find source code in 'Codes_src' directory in repo.</h5>
+<h1 class="atx" id="thank-you-peace-✌️">Thank you. Peace ✌️.</h1>
+<hr>
+<div>
+<h4 align="center">Made with ❤️ by <a href="https://github.com/sasivatsal7122">SasiVatsal</a> and <a href="https://github.com/SaiMowli">Mowli</a>
+</h4></div>
+
+<hr>
+</article>
+</body>
+</html>

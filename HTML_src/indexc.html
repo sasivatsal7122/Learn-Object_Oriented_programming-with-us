@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inheritance</title>
+  <title>Introduction</title>
   <style>
   @font-face {
   font-family: octicons-link;
@@ -1242,7 +1242,7 @@ pre[class*="language-"] {
   <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
 </head>
 <body>
-  <article class="markdown-body"><h1 align="center"><a href='indexc.html'>Learn-Object_Oriented_programming-with-us</a></h1>
+  <article class="markdown-body"><h1 align="center"><a href='index.html'>Learn-Object_Oriented_programming-with-us</a></h1>
 
 <h3> Learn By Topic: </h3>
 
@@ -1251,84 +1251,53 @@ pre[class*="language-"] {
 <h3 style="display:inline;"><a href="class_objects.html" target="_blank" >Class-objects</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="inheritance.html" target="_blank">Inheritance</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="polymorphism.html" target="_blank">Polymorphism</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="encapsulation.html" target="_blank">Encapsulation</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="abstraction.html" target="_blank">Abstraction</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href=""></a></h3>
 
 <h1 class="atx" id=""></h1>
-<h1 class="atx" id="what-is-inheritance">What is Inheritance?</h1>
+<h1 class="atx" id="what-is-oopand39s">What is OOP's?</h1>
 <ul>
-<li><p>Inheritance is one of the core concepts of object-oriented programming (OOP) languages. It is a mechanism where you can to derive a class from another class for a hierarchy of classes that share a set of attributes and methods.</p>
+<li><p>Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic.</p>
 </li>
-<li><p>For example, herding dogs have the unique ability to herd animals. In other words, all herding dogs are dogs, but not all dogs are herding dogs. We represent this difference by creating a child class HerdingDog from the parent class Dog, and then add the unique herd() behavior. This might sound a little bit confusing at the start , trust me you'll get through with the conecpt in later sections</p>
-</li>
-<li><p>The benefits of inheritance are programs can create a generic parent class, and then create more specific child classes as needed. This simplifies overall programming, because instead of recreating the structure of the Dog class multiple times, child classes automatically gain access to functionalities within their parent class.</p>
+<li><p>OPs refers to languages that uses objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism etc in programming. The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.</p>
 </li>
 </ul>
-<h1 class="atx" id="advantages-of-inheritance">Advantages of Inheritance</h1>
-<p>Below are listed a few pros of inheritance:</p>
-<ol>
-<li><p>With the help of inheritance, we need not create and define data members and functions recursively. We code once in a class, and they can inherit all properties of data members and functions in the subsequent subclass. This feature also helps in effective dynamic programming.</p>
-</li>
-<li><p>Frequent use of code written once, i.e. code reusability.</p>
-</li>
-<li><p>One superclass can be used for the number of subclasses in a hierarchy.</p>
-</li>
-<li><p>No changes to be done in all base classes; just do changes in parent class only.</p>
-</li>
-<li><p>Inheritance is used to generate more dominant objects.</p>
-</li>
-<li><p>Inheritance avoids duplicity and data redundancy.</p>
-</li>
-<li><p>Inheritance is used to avoid space complexity and time complexity.</p>
-</li>
-</ol>
-<h1 class="atx" id="different-types-of-inheritance">Different Types of Inheritance</h1>
-<h6 class="atx" id="oops-support-the-five-different-types-of-inheritance-as-given-below-">OOPs support the five different types of inheritance as given below :</h6>
+<h2 class="atx" id="what-are-some-tenets-of-object-oriented-programming">What are some tenets of object-oriented programming?</h2>
 <ul>
-<li><p>Single inheritance</p>
-</li>
-<li><p>Multi-level inheritance</p>
-</li>
-<li><p>Multiple inheritance</p>
-</li>
-<li><p>Hierarchical Inheritance</p>
-</li>
-<li><p>Hybrid Inheritance</p>
-</li>
+<li>Objects comprise data that define its state and methods that define its behavior. Each object encapsulates these two entities.</li>
+<li>The internal implementation of object methods is invisible to the user. This way objects abstract state changes under a simplified external API.</li>
+<li>Objects are instances of classes. Classes are blueprints to build objects. The class of an object is also its type.</li>
+<li>Classes can inherit both state and behavior from other classes. Based on this notion, objects of the subclass support casting into objects of the parent class.</li>
+<li>This form of casting gives rise to polymorphism. The program can implicitly cast an object of a class to an object of the class’s ancestors.</li>
 </ul>
-<h2 class="atx" id="single-inheritance">Single inheritance</h2>
-<p>In this inheritance, a derived class is created from a single base class.</p>
-<p>In the given example, Class A is the parent class and Class B is the child class since Class B inherits the features and behavior of the parent class A.</p>
-<img data-align="center" alt="" src="file:///C:/Users/sasiv/AppData/Roaming/marktext/images/2022-01-26-09-12-22-image.png" title="">
-
-<h2 class="atx" id="multi-level-inheritance">Multi-level inheritance</h2>
-<p>In this inheritance, a derived class is created from another derived class.</p>
-<p>In the given example, childClass_1 inherits the properties and behavior of ParentClass and ChildClass_2  inherits the properties and behavior of ChildClass_1 . So, here ChildClass_1 is the parent class of ChildClass_2 and class ParentClass is the parent class of ChildClass_1. So, here class ChildClass_2 implicitly inherits the properties and behavior of class ChildClass_1 along with Class ParentClass i.e there is a multilevel of inheritance.</p>
-<img data-align="center" alt="" title="" src="file:///C:/Users/sasiv/AppData/Roaming/marktext/images/2022-01-26-09-21-41-image.png">
-
-<h2 class="atx" id="multiple-inheritance">Multiple inheritance</h2>
-<p>In this inheritance, a derived class is created from more than one base class. This inheritance is not supported by .NET Languages like C#, F# etc. and Java Language.</p>
-<p>In the given example, ChildClass inherits the properties and behavior of ParentClass_1 and ParentClass_2 at same level. So, here ParentClass_1 and ParentClass_2 both are the parent classes for ChildClass.</p>
-<img data-align="center" alt="" title="" src="file:///C:/Users/sasiv/AppData/Roaming/marktext/images/2022-01-26-09-21-57-image.png">
-
-<h2 class="atx" id="hierarchical-inheritance">Hierarchical Inheritance</h2>
-<p>In this inheritance, more than one derived classes are created from a single base class and futher child classes act as parent classes for more than one child classes.</p>
-<p>In the given example, ParentClass has two childs class's i.e  ChildClass_1 and ChildClass_2 . From a single parent class more than one child class inheriting is called Hierarchical inheritance.</p>
-<img data-align="center" alt="" title="" src="file:///C:/Users/sasiv/AppData/Roaming/marktext/images/2022-01-26-09-16-52-image.png">
-
-<h2 class="atx" id="hybrid-inheritance">Hybrid inheritance</h2>
-<p>This is combination of more than one inheritance. Hence, it may be a combination of Multilevel and Multiple inheritance or Hierarchical and Multilevel inheritance or Hierarchical and Multipath inheritance or Hierarchical, Multilevel and Multiple inheritance.</p>
-<img data-align="center" alt="" title="" src="file:///C:/Users/sasiv/AppData/Roaming/marktext/images/2022-01-26-09-17-55-image.png">
-
-<h3 class="atx" id="-1"></h3>
-<h2 class="atx" id="i-hope-youand39re-clear-with-basic-idea-of-what-is-inheritance-uses-of-inheritance-and-type-of-inheritance-weand39ll-extend-out-knowledge-on-inheritance-by-discussing-a-simple-example-in-next-sections">I hope you're clear with basic idea of what is inheritance, uses of inheritance and type of inheritance. We'll extend out knowledge on inheritance by discussing a simple example in next sections.</h2>
-<div>
-<h3>Click <a href="inheritance2.html" target="_blank" >HERE</a> for part-2 of Inheritance where we will be discussing a real life example of all types of inheritance</h3>
-</div>
-
+<h3 class="atx" id="benefits-of-oop">Benefits of OOP</h3>
+<ul>
+<li>OOP models complex things as reproducible, simple structures</li>
+<li>Reusable, OOP objects can be used across programs</li>
+<li>Allows for class-specific behavior through polymorphism</li>
+<li>Easier to debug, classes often contain all applicable information to them</li>
+<li>Secure, protects information through encapsulation</li>
+</ul>
+<h2 class="atx" id="building-blocks-of-oop">Building blocks of OOP</h2>
+<ul>
+<li>Classes</li>
+<li>Objects</li>
+<li>Methods</li>
+<li>Attributes</li>
+</ul>
+<h2 class="atx" id="four-principles-of-oop">Four Principles of OOP</h2>
+<p>The four pillars of object oriented programming are:</p>
+<ul>
+<li><strong>Inheritance:</strong>&nbsp;child classes inherit data and behaviors from parent class</li>
+<li><strong>Encapsulation:</strong>&nbsp;containing information in an object, exposing only selected information</li>
+<li><strong>Abstraction:</strong>&nbsp;only exposing high level public methods for accessing an object</li>
+<li><strong>Polymorphism:</strong>&nbsp;many methods can do the same task</li>
+</ul>
+<h3 class="atx" id="this-is-brief-introduction-to-oopand39s-concepts-weand39ll-extend-our-knowledge-on-oopand39s-in-next-sections-of-this-tutorial">This is brief introduction to OOP's concepts, we'll extend our knowledge on oop's in next sections of this tutorial</h3>
 <div>
 <br>
 <br>
-
 </div>
 
 <h1 class="atx" id="thank-you-peace-✌️">Thank you. Peace ✌️.</h1>
+
+
 <hr>
 <div>
 <h4 align="center">Made with ❤️ by <a href="https://github.com/sasivatsal7122">SasiVatsal</a> and <a href="https://github.com/SaiMowli">Mowli</a>
