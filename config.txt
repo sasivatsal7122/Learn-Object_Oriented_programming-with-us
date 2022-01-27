@@ -12,7 +12,7 @@ h1,h2{color:#FFC600;}
 h3,h4,p,ol,ul{color:white;}
 
 
-.links a{color:#F90716;}
+.links a{color:#FF0000;}
 
 <link rel="icon" href="py.png">
 
