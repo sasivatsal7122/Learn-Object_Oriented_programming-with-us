@@ -2,7 +2,7 @@
 <h1 align="center">Learn Object Oriented Programming With us 👨🏻‍💻</h1>
 
 #### Hey there buddy!, you have come to the right place to brush up you're skills in objects oriented programming, with the provided study material, numerous examples and notebook assignments , you can be pretty confident about OOP concepts by the end of you're learning jouney in this repo. Start you're OOP coding journey from the link provied below.
-<h3 align="center">Visit link --> <a href='https://sasivatsal7122.github.io/OOP-web-hosting/'>Learn-Object_Oriented_programming-with-us</a></h3></p>
+<h3 align="center">Visit link --> <a href='https://sasivatsal7122.github.io/Learn-Object_Oriented_programming-with-us/'>Learn-Object_Oriented_programming-with-us</a></h3></p>
 
 #### This paticular repo contains everything you need for learning,understanding,applying and practicing OOP concepts. Visit the website, there you can learn Topic Wise.
 
@@ -19,7 +19,7 @@
 - ### UI/UX, Introduction, Class-Objects, Inheritance designed and authored by --> <a href='https://github.com/sasivatsal7122'>SasiVatsal</a>
 - ### Polymorphism, Encapsulation, Abstraction authored by --> <a href='https://github.com/SaiMowli'>Mowli</a>
 
-<h3 align="center">Visit link --> <a href='https://sasivatsal7122.github.io/OOP-web-hosting/'>Learn-Object_Oriented_programming-with-us</a></h3></p>
+<h3 align="center">Visit link --> <a href='https://sasivatsal7122.github.io/Learn-Object_Oriented_programming-with-us/'>Learn-Object_Oriented_programming-with-us</a></h3></p>
 
 ### Note:
 - Jupyter/kaggle assignments will be added soon.
