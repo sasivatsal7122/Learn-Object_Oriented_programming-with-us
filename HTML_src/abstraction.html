@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Encapsulation</title>
-<link rel="icon" href="py.png">  
-<style>
+  <title>Abstraction</title>
+<link rel="icon" href="py.png">
+  <style>
+
+html { 
+  background:no-repeat center center fixed; 
+background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(bg/s3.jpg);
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1,h2{color:#FFC600;}
+h3,h4,p,ol,ul{color:white;}
+
   @font-face {
   font-family: octicons-link;
   src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
@@ -1239,99 +1252,127 @@ pre[class*="language-"] {
   margin: 0 10px;
   border-bottom: 2px dotted black;
 }
+.links a{color:#FF0000;}
 </style>
   <style>.markdown-body{}pre.front-matter{display:none!important;}</style>
 </head>
 <body>
-
- <article class="markdown-body"><h1 align="center"><a href="../focus_mode/indexf.html">Learn-Object_Oriented_programming-with-us</a></h1>
-
+<article class="markdown-body"><h1 align="center"><a href="../index.html"style="color:#79D70F;">Learn-Object_Oriented_programming-with-us</a></h1>
 <h3> Learn By Topic: </h3>
 
 <h1></h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<h3 style="display:inline;"><a href="../focus_mode/class_objectsf.html">Class-objects</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../focus_mode/inheritancef.html">Inheritance</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../focus_mode/polymorphismf.html">Polymorphism</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../focus_mode/encapsulationf.html">Encapsulation</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../focus_mode/abstractionf.html">Abstraction</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href=""></a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="links"><h3 style="display:inline;"><a href="../HTML_src/class_objects.html">Class-objects</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../HTML_src/inheritance.html">Inheritance</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../HTML_src/polymorphism.html">Polymorphism</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../HTML_src/encapsulation.html">Encapsulation</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href="../HTML_src/abstraction.html">Abstraction</a></h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h3 style="display:inline;"><a href=""></a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 <div>
-<h4 align="center">Click here to toggle b/w normal and focus mode: <a href="../HTML_src/encapsulation.html">NORMAL MODE</a></h4>
+<h4 align="center">Click here to toggle b/w normal and focus mode: <a style="color:#00BCD4;" href="../focus_mode/abstractionf.html">FOCUS MODE</a></h4>
 </div>
 
 <h1 class="atx" id=""></h1>
-<h1 class="atx" id="what-is-encapsulation-">What is Encapsulation ?</h1>
-<p>Encapsulation is one of the fundamental concepts in object-oriented programming (OOP).Encapsulation in Python describes the concept of  bundling data and&nbsp;methods&nbsp;within a single unit . Even creating a class is like encapsulation , as it builds all the data members (instance variables) and methods into a single unit.</p>
-<h5 class="atx" id="example">Example</h5>
-<pre><code class="fenced-code-block language-python"><span class="token keyword">class</span> <span class="token class-name">students</span><span class="token punctuation">:</span>
-<span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>name<span class="token punctuation">,</span>intrest<span class="token punctuation">)</span> <span class="token punctuation">:</span>
-self<span class="token punctuation">.</span>name<span class="token operator">=</span>name <span class="token comment">#data member</span>
-self<span class="token punctuation">.</span>intrest<span class="token operator">=</span>intrest <span class="token comment">#data member</span>
+<h1 class="atx" id="what-is-abstraction-">What is Abstraction ?</h1>
+<p>The process by which data and functions are defined in such a way that only essential details can be seen and unnecessary implementations are hidden is called Data Abstraction.</p>
+<p>Abstraction is really powerful for making complex tasks and codes simpler when used in Object-Oriented Programming. It reduces the complexity for the user by making the relevant part accessible and usable leaving the unnecessary code hidden.</p>
+<p>Example:</p>
+<p>We use the TV remote to switch the TV ON or OFF, switch to different channels, and raise or lower the volume. The TV user only knows he/she may use the buttons on the remote to do it.But they don't know what happens internally  , for example how the TV sensor is capturing signals from the TV remote etc. All the internal functionality is hidden, as for the user it might not be necessary for them to know how that is happening.</p>
+<p>HOW ABSTRACT WORKS :</p>
+<p>Python does not provide abstract classes. Python comes with a module that provides the base for defining Abstract Base classes(ABC) and that module name is ABC. <strong><em>ABC</em></strong> works by decorating methods of the base class as abstract and then registering concrete classes as implementations of the abstract base.</p>
+<p>Example:-</p>
+<pre><code class="fenced-code-block language-python"><span class="token keyword">from</span> abc <span class="token keyword">import</span> ABC<span class="token punctuation">,</span> abstractmethod
 
-<span class="token comment">#method</span>
-<span class="token keyword">def</span> <span class="token function">prof</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span><span class="token string">'is intrested in'</span>self<span class="token punctuation">.</span>intrest<span class="token punctuation">)</span></code></pre>
-<p>In detailed , it describes the idea of wrapping data and the methods that work on data within one unit. This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data.</p>
-<p>So, in short. To prevent accidental change, an object’s variable can only be changed by an object’s method. Those types of variables are known as <strong>PRAVITE</strong>.</p>
-<p>Consider a real-life example of encapsulation, in a company, there are different sections like the accounts section, finance section, sales section etc.</p>
-<h1 class="atx" id="access-modifiers">Access Modifiers</h1>
-<p>Encapsulation can be achived/initiated by declaring the data members and methods of a class either as private or protected. As we don’t have direct access modifiers like public, private, and protected. We can achieve this by using single <strong>underscore</strong> and <strong>double</strong> <strong>underscores</strong>.</p>
-<p>Python provides three types of access modifiers private, public, and protected.</p>
+<span class="token keyword">class</span> <span class="token class-name">Polygon</span><span class="token punctuation">(</span>ABC<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">noofsides</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Square</span><span class="token punctuation">(</span>Polygon<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># overriding abstract method</span>
+    <span class="token keyword">def</span> <span class="token function">noofsides</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I have 4 sides"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Octagon</span><span class="token punctuation">(</span>Polygon<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># overriding abstract method</span>
+    <span class="token keyword">def</span> <span class="token function">noofsides</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I have 8 sides"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Heptagon</span><span class="token punctuation">(</span>Polygon<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># overriding abstract method</span>
+    <span class="token keyword">def</span> <span class="token function">noofsides</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I have 7 sides"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Hexagon</span><span class="token punctuation">(</span>Polygon<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># overriding abstract method</span>
+    <span class="token keyword">def</span> <span class="token function">noofsides</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I have 6 sides"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Driver code</span>
+R <span class="token operator">=</span> Square<span class="token punctuation">(</span><span class="token punctuation">)</span>
+R<span class="token punctuation">.</span>noofsides<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+K <span class="token operator">=</span> Hexagon<span class="token punctuation">(</span><span class="token punctuation">)</span>
+K<span class="token punctuation">.</span>noofsides<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+R <span class="token operator">=</span> Heptagon<span class="token punctuation">(</span><span class="token punctuation">)</span>
+R<span class="token punctuation">.</span>noofsides<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+K <span class="token operator">=</span> Octagon<span class="token punctuation">(</span><span class="token punctuation">)</span>
+K<span class="token punctuation">.</span>noofsides<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>Output :</p>
+<pre><code class="fenced-code-block">I have 4 sides
+I have 6 sides
+I have 7 sides
+I have 8 sides</code></pre>
+<p>In the above code, we have imported the <strong>abc module</strong> to create the abstract base class.</p>
+<p>We created different classes that inherited the ABC class and defined an abstract method named noofsides().</p>
+<p>We have then inherited the base class from the three different subclasses and implemented the abstract method differently. We created the objects to call the abstract method.</p>
+<h2 class="atx" id="why-use-abstract-base-class">Why use Abstract Base Class?</h2>
+<p>Defining an Abstract Base Class lets us create a common&nbsp;Application Programming Interface (API)&nbsp;for multiple subclasses. It is useful while working in large teams and code-bases so that all of the classes need not be remembered and also be provided as library by third parties.</p>
+<h2 class="atx" id="points-to-remember">Points to Remember</h2>
+<p>Below are the points which we should remember about the abstract base class in Python.</p>
 <ul>
-<li><strong>Public Member</strong>: Accessible from anywhere from the class.</li>
-<li><strong>Private Member</strong>: Accessible within the class</li>
-<li><strong>Protected Member</strong>: Accessible within the class and its sub-classes</li>
+<li>An Abstract class can contain the both method normal and abstract method.</li>
+<li>An Abstract cannot be instantiated; we cannot create objects for the abstract class.</li>
 </ul>
-<h5 class="atx" id="example-">Example :</h5>
-<pre><code class="fenced-code-block language-python"><span class="token keyword">class</span> <span class="token class-name">student</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token string">"Mowli"</span>
-        self<span class="token punctuation">.</span>_b<span class="token operator">=</span><span class="token number">19</span>
+<p>Abstraction is essential to hide the core functionality from the users. We have covered the all the basic concepts of Abstraction in Python.</p>
+<h2 class="atx" id="why-data-abstraction-is-important">Why Data Abstraction is Important?</h2>
+<p>Now that we know what&nbsp;Data Abstraction in Python&nbsp;is, we can also conclude how it is important.</p>
+<p>Data Abstraction firstly saves a lot of our time as we do not have to repeat the code that may be the same for all the classes. Moreover, if there are any additional features, they can be easily added, thus improving flexibility. Not to mention, working in large teams becomes easier as one won’t have to remember every function and the basic structure can be inherited without any confusions.</p>
+<p><strong>Abstract Properties :</strong>&nbsp; 
+Abstract classes include attributes in addition to methods, you can require the attributes in concrete classes by defining them with @abstractproperty.</p>
+<pre><code class="fenced-code-block language-python"><span class="token keyword">import</span> abc
+<span class="token keyword">from</span> abc <span class="token keyword">import</span> ABC<span class="token punctuation">,</span> abstractmethod
 
-<span class="token keyword">class</span> <span class="token class-name">display</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">class</span> <span class="token class-name">parent</span><span class="token punctuation">(</span>ABC<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token decorator annotation punctuation">@abc<span class="token punctuation">.</span>abstractproperty</span>
+    <span class="token keyword">def</span> <span class="token function">geeks</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"parent class"</span>
+<span class="token keyword">class</span> <span class="token class-name">child</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
 
-        student<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>__c <span class="token operator">=</span> <span class="token string">"abcde@gmail.com"</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Calling private member of base class: "</span><span class="token punctuation">)</span>
-
-        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>__c<span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Calling protectwed member of base class:"</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>_b<span class="token punctuation">)</span>
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">geeks</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">"child class"</span>
 
 
-obj1 <span class="token operator">=</span> display<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>a<span class="token punctuation">)</span></code></pre>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    r <span class="token operator">=</span>parent<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span> r<span class="token punctuation">.</span>geeks<span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception <span class="token keyword">as</span> err<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+
+r <span class="token operator">=</span> child<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>r<span class="token punctuation">.</span>geeks<span class="token punctuation">)</span></code></pre>
 <p>Output:</p>
-<pre><code class="fenced-code-block">Calling private member of base class: 
-abcde@gmail.com
-Calling protectwed member of base class:
-19
-Mowli</code></pre>
-<h1 class="atx" id="protected-member">Protected Member</h1>
-<p>Protected members (in C++,Python and JAVA) are those members of the class that cannot be accessed outside the class but can be accessed from within the class and its subclasses.</p>
-<p>As given in the above example , the <strong>Protected Member</strong> can only be accessed from the class itself or the class that inherited it.</p>
-<h1 class="atx" id="private-member">Private Member</h1>
-<p>Private members are similar to protected members, the only difference between them is that the class members declared private should neither be accessed outside the class nor by any base class.</p>
-<p>As you have seen in the above example , the <strong>Private Member</strong> is accessed only in the class it was initialized.</p>
-<h1 class="atx" id="setters-and-getters">Setters and Getters</h1>
-<p>In python to implement  proper encapsulation, we need to use setters and getters.The primary purpose of using getters and setters in object-oriented programs (OOP)is to ensure data encapsulation.</p>
-<p>In Python, private variables are not hidden fields like in other programming languages. The getters and setters methods are often used when:</p>
-<ul>
-<li><p>We use getters &amp; setters to add validation logic around getting and setting a value.</p>
-</li>
-<li><p>To avoid direct access of a class field i.e. private variables cannot be accessed directly or modified by external user.</p>
-</li>
-</ul>
-<h2 class="atx" id="advantages-of-encapsulation"><strong>Advantages of Encapsulation</strong></h2>
-<ul>
-<li>The objects within the class are disconnected from irrelevant data.</li>
-<li>It heightens the security against hackers that are unable to access confidential data.</li>
-<li>It prevents programmers from accidental linkage to incorrect data. If the programmer links this data in the code, it will only return an error by indicating corrections in the mistake.</li>
-<li>It isolates objects as the basic concept of OOP.</li>
-<li>It helps to prevent damage to volatile data by hiding it from the public.</li>
-</ul>
+<pre><code class="fenced-code-block">Can't instantiate abstract class parent with abstract method geeks
+child class</code></pre>
+<p>In the above example, the Base class cannot be instantiated because it has only an abstract version of the property getter method.</p>
 <h1 class="atx" id="thank-you-peace-✌️">Thank you. Peace ✌️.</h1>
 <hr>
 <div>
-<h4 align="center">Made with ❤️ by <a href="https://github.com/sasivatsal7122">SasiVatsal</a> and <a href="https://github.com/SaiMowli">Mowli</a>
+<h4 align="center">Made with ❤️ by <a style="color:#00BCD4;" href="https://github.com/sasivatsal7122">SasiVatsal</a> and <a style="color:#00BCD4;" href="https://github.com/SaiMowli">Mowli</a>
 </h4></div>
 
 <hr>
