@@ -6,7 +6,7 @@
 
 #### This paticular repo contains everything you need for learning,understanding,applying and practicing OOP concepts. Visit the website, there you can learn Topic Wise.
 
-#### There is a detailed professional notes all core topics in OOP , click on the topic you wanna know about and start learning and exploring.
+#### There is a detailed notes on all core topics in OOP , click on the topic you wanna learn/know about and start exploring.
 
 ### What makes this website unique?
 - This particular website is one of it's kind and purely dedicated to OOP concepts with an appealing and pleasing look to work with.
